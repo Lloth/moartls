@@ -1,16 +1,6 @@
 "use strict";
 
 {
-    function markUnsecureImages()
-    {
-        const imgs = document.querySelectorAll("img");
-        for (let i = 0; i < imgs.length; i++)
-        {
-            if (imgs[i].src.substring(0,5) === "http:") {
-                imgs[i].classList.add("moarTLSUnsecure");
-            }
-        }
-    }
 
     const arrUnsecure = [];
     let cLinks = 0;
@@ -23,18 +13,7 @@
               document.body.classList.add("moarTLSUnsecure");
         }
     }
-    
-    {
-        if (chrome.storage)
-        {
-            const storage = (chrome.storage.sync ? chrome.storage.sync : chrome.storage.local);
-            storage.get("bRotateNonSecureImages", function(obj) {
-              if (obj && (false === obj.bRotateNonSecureImages)) return;
-              markUnsecureImages();
-            });
-        }
-    }
-    
+
     {
         let sSelector = "* /deep/ form[action]";
         if (typeof browser !== 'undefined') sSelector = "form[action]";

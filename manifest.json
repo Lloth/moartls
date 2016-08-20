@@ -49,7 +49,6 @@
     "tabs",
     "activeTab",
     "storage",
-    "<all_urls>",
-    "downloads"
+    "<all_urls>"
   ]
 }

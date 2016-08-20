@@ -6,14 +6,6 @@ a:hover { text-decoration: underline }
 a:focus { text-decoration: underline; border: none; }
 li { white-space: nowrap; text-overflow: ellipsis; cursor: pointer; min-height: 16px; }
 ol { padding-left: 2px; list-style: inside decimal; }
-.isHTTPSyes { color: #2CB144; list-style-image:url('images/HTTPSyes.png'); }
-.isHTTPSno { color: #E04343; list-style-image:url('images/HTTPSno.png'); }
-.isHSTS { font-weight: bold; list-style-image:url('images/HSTSyes.png'); }
-.pageIsHSTS:before { content: url('images/IsHSTS.png'); padding-right: 5px; }
-.pageIsHTTPS:before { content: url('images/IsHTTPS.png'); padding-right: 5px; }
-.pageCanUpgrade:before { content: url('images/HTTPSyes.png'); padding-right: 5px; }
-a.pageCannotUpgrade { color: black; cursor: default; text-decoration:none; }
-.pageCannotUpgrade:before { content: url('images/HTTPSno.png'); padding-right: 5px; }
 ::selection { background:#C6FFDE; }
 .scanErrorMessage { width:100%; color: gray; font-size: xx-small; }
 

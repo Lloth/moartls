@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Total number of non-secure elements in the page
-var cTotalUnsecure = 0;
 // Hashtable mapping Origin->ListItem[]
 var htLinks = {};
 
@@ -72,23 +71,6 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
         divError.textContent = "Error in " + request.context + ": " + request.error;
         document.body.appendChild(divError);
         return;
-    }
-
-    cTotalUnsecure += (request.unsecure) ? request.unsecure.length : 0;
-
-    const bAnyInsecure = (cTotalUnsecure > 0);
-
- 
-    if (bAnyInsecure) {  // If any link is insecure
-        document.body.style.backgroundColor = "#FFFF40";  // Yellow
-
-    }
-    else
-    {
-        if (document.getElementById("lnkDomain").classList.contains("pageIsHTTPS"))
-        {
-            document.body.style.backgroundColor = "#68FF68";  // Green
-        }
     }
 
 });
