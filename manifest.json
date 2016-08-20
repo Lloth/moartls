@@ -40,11 +40,6 @@
    "default_title": "Mark non-secure links"
   },
 
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-
   "permissions": [
     "tabs",
     "activeTab",
